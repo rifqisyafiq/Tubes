@@ -7,20 +7,7 @@ import json
 import requests
 from models.users import Token, UserIn, User
 
-url = 'https://tubes-tst-18221066-rollcall.azurewebsites.net/'
 
-def get_admin_token(admin_username: str, admin_password: str, token_url: str):
-    data = {
-        "username": admin_username,
-        "password": admin_password
-    }
-    response = requests.post(token_url, data=data)
-    
-    if response.status_code != 200:
-        raise Exception(f"Failed to get token: {response.content}")
-    
-    token = response.json().get("access_token")
-    return token
 
 auth_router = APIRouter(tags=["Authentication"])
 JWT_SECRET = 'myjwtsecret'
@@ -88,8 +75,6 @@ async def get_current_user(token: str = Depends(oauth2_scheme)):
 async def get_user(user: User = Depends(get_current_user)):
     return user
 
-async def get_admin_token_async():
-    return get_admin_token("afton", "1987", url + "/token")
 
 # Route to register a new user
 @auth_router.post('/register-friends', response_model=User)
@@ -98,11 +83,7 @@ async def register_user_and_friends(user: UserIn):
     password_hash = bcrypt.hash(user.password)
 
     is_admin = user.username == "admin"
-    admin_token = await get_admin_token_async()
-    print("Admin Token:", admin_token)  # Add this line to check the token
 
-    
-    headers = {'Authorization': f'Bearer {admin_token}'}
     newuser ={
         "id": user_id,
         "username": user.username,
@@ -111,27 +92,27 @@ async def register_user_and_friends(user: UserIn):
         "city": user.city,
         "role": "admin" if is_admin else "user",
     }
+    print(newuser)
     response = requests.post(
-    "https://tubes-tst-18221066-rollcall.azurewebsites.net/user",
-    headers=headers,
-    json=newuser)
+    "https://tubes-tst-18221066-rollcall.azurewebsites.net/user/",
+    json=newuser
+    )
 
-    print("Response Status Code:", response.status_code)
-    print("Response Content:", response.content)
-
-    
+    if response.status_code == 200:
+        print("User registered successfully")
     if response.status_code != 200:
         raise HTTPException(
-            status_code=response.status_code,
+            status_code=response.status_code, 
             detail="Error registering user with your friend's API."
         )
 
     new_user = {
-        "id": user_id,
+        "user_id": user_id,
         "username": user.username,
-        "password_hash": password_hash,
+        "hashed_password": password_hash,
         "is_admin": is_admin,
         "rating": user.rating,
+        "bgrating": user.bgrating,
         "map_id": user.map_id,
         "gamemode_id": user.gamemode_id,
     }

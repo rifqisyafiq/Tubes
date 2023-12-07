@@ -1,23 +1,350 @@
 [
-    {"user_id": 1, "username": "player1", "hashed_password": "$2y$10$G.tMZT6UeXcNW40ZnQCHwOLorpub2RD0xSbv/nAn2uQfrfNNT0o.m", "rating": 1500,"bgrating": 1500, "map_id": 1, "gamemode_id": 1, "is_admin": true},
-    {"user_id": 2, "username": "player2", "hashed_password": "$2y$10$ZQbeYepXpS601XBDFWbELuQDzYMTWr3TiffogGpjxbu6yk0k5BtrO", "rating": 1600,"bgrating": 1600, "map_id": 2, "gamemode_id": 2, "is_admin": true},
-    {"user_id": 3, "username": "player3", "hashed_password": "$2y$10$HzkyNkmfyM4EfzKbpAasUOpreNsYSPqX1eDIaEl3konMUqM2CORCy", "rating": 1550,"bgrating": 1550, "map_id": 3, "gamemode_id": 1, "is_admin": true},
-    {"user_id": 4, "username": "player4", "hashed_password": "$2y$10$jHWEi2xTiy0nZlatW6PqqOPsq8U8ULRjX94jlexIbhEivemuu/eWm", "rating": 1700, "bgrating": 1700,"map_id": 4, "gamemode_id": 2, "is_admin": false},
-    {"user_id": 5, "username": "player5", "hashed_password": "$2y$10$5oGQY9ZM.Q2x0b9cWm6eBuPn4ghW.TbMMLCDbUHt.CmUAdUTHg4RS", "rating": 1400, "bgrating": 1400,"map_id": 1, "gamemode_id": 3, "is_admin": false},
-    {"user_id": 6, "username": "player6", "hashed_password": "$2y$10$v.QxrNnu0WR42TdgLzVZj.I4AdSKdzgMtMGt7OvA3j3w3LtA.ADYy", "rating": 1650, "bgrating": 1650,"map_id": 2, "gamemode_id": 4, "is_admin": false},
-    {"user_id": 7, "username": "player7", "hashed_password": "$2y$10$wA8NAiEu0elLUyDRzacOVuvEhTbj.UxNZWpm9tZBpIyiIyF7mMwtC", "rating": 1550, "bgrating": 1550,"map_id": 5, "gamemode_id": 1, "is_admin": false},
-    {"user_id": 8, "username": "player8", "hashed_password": "$2y$10$6gtbkqGwlp1EqjGFU/ZRTenXIiZQ9fBRUH3yjV0HObEaJdzWIpyLS", "rating": 1600, "bgrating": 1600,"map_id": 6, "gamemode_id": 2, "is_admin": false},
-    {"user_id": 9, "username": "player9", "hashed_password": "$2y$10$iV.Jaly0PMDWXHLxJfGvHuBVr4jlQbFbzM4Gguex1qokU0F5Q06py", "rating": 1450,"bgrating": 1450,"map_id": 3, "gamemode_id": 3, "is_admin": false},
-    {"user_id": 10, "username": "player10", "hashed_password": "$2y$10$a6mttATqsXePsEa2W.fopeigzedo/6yJzclv0VR3WQMNnHEQXe332", "rating": 1800,"bgrating": 1800, "map_id": 7, "gamemode_id": 4, "is_admin": false},
-    {"user_id": 11, "username": "player11", "hashed_password": "$2y$10$TTeWH1as76ocVdTRRHXTDOCyazhUpkvEgAhy0a6NDVDjQzuf.oQcu", "rating": 1700,"bgrating": 1700, "map_id": 8, "gamemode_id": 1, "is_admin": false},
-    {"user_id": 12, "username": "player12", "hashed_password": "$2y$10$gVkgqrThZkoHxdIPb9FQwOGwbixDHOKOHQiITYJYBFL8USEEBFGLm", "rating": 1500, "bgrating": 1500,"map_id": 9, "gamemode_id": 2, "is_admin": false},
-    {"user_id": 13, "username": "player13", "hashed_password": "$2y$10$GGyWlmNO5.oyogtTbt.JxucRs4PXGkXd8FxCO5ZyfsfypdCi8DgaG", "rating": 1550, "bgrating": 1550,"map_id": 7, "gamemode_id": 3, "is_admin": false},
-    {"user_id": 14, "username": "player14", "hashed_password": "$2y$10$6c9SKU5xzBQH3O1HqwX9geWDP87UFgzBve1LQu9U6jiUAGrt0W9Yy", "rating": 1620, "bgrating": 1620,"map_id": 6, "gamemode_id": 4, "is_admin": false},
-    {"user_id": 15, "username": "player15", "hashed_password": "$2y$10$l0IOk/OlKplofsMNRbODjueS/FMb0fcqnycdBbLUAnPCS5DkSL9FW", "rating": 1470, "bgrating": 1470,"map_id": 4, "gamemode_id": 1, "is_admin": false},
-    {"user_id": 16, "username": "player16", "hashed_password": "$2y$10$DfmoCh5R88TIZlhI11LY2.KorUp6mOg5vvy8ycKwHARa1oRav82xu", "rating": 1550, "bgrating": 1550,"map_id": 5, "gamemode_id": 2, "is_admin": false},
-    {"user_id": 17, "username": "player17", "hashed_password": "$2y$10$RIf11TfAXfloO.OBDlsRX.wjlgyoG07JDSq/zfO4c6MI/tRTO2QN6", "rating": 1530, "bgrating": 1530,"map_id": 3, "gamemode_id": 3, "is_admin": false},
-    {"user_id": 18, "username": "player18", "hashed_password": "$2y$10$KyWYFjWpkXxY/67mwXzckuyebeC9YOxtdPcTyNsBV.lKKFJtz2JeS", "rating": 1650, "bgrating": 1650,"map_id": 2, "gamemode_id": 4, "is_admin": false},
-    {"user_id": 19, "username": "player19", "hashed_password": "$2y$10$C3ZYBvV2q.FQE/rKxqdGneqz0YzB8bCgHPtTGYFwxa3yvY7mE3Aoa", "rating": 1600, "bgrating": 1600,"map_id": 1, "gamemode_id": 1, "is_admin": false},
-    {"user_id": 20, "username": "player20", "hashed_password": "$2y$10$TYuKLwkuH49IGZvx9gK1sefpnaXvq5t8w8JvNkOtxaD/eksRNenLi", "rating": 1680, "bgrating": 1600,"map_id": 5, "gamemode_id": 2, "is_admin": false}
-  ]
-  
+    {
+        "user_id": 1,
+        "username": "player1",
+        "hashed_password": "$2y$10$G.tMZT6UeXcNW40ZnQCHwOLorpub2RD0xSbv/nAn2uQfrfNNT0o.m",
+        "rating": 1500,
+        "bgrating": 1500,
+        "map_id": 1,
+        "gamemode_id": 1,
+        "is_admin": true
+    },
+    {
+        "user_id": 2,
+        "username": "player2",
+        "hashed_password": "$2y$10$ZQbeYepXpS601XBDFWbELuQDzYMTWr3TiffogGpjxbu6yk0k5BtrO",
+        "rating": 1600,
+        "bgrating": 1600,
+        "map_id": 2,
+        "gamemode_id": 2,
+        "is_admin": true
+    },
+    {
+        "user_id": 3,
+        "username": "player3",
+        "hashed_password": "$2y$10$HzkyNkmfyM4EfzKbpAasUOpreNsYSPqX1eDIaEl3konMUqM2CORCy",
+        "rating": 1550,
+        "bgrating": 1550,
+        "map_id": 3,
+        "gamemode_id": 1,
+        "is_admin": true
+    },
+    {
+        "user_id": 4,
+        "username": "player4",
+        "hashed_password": "$2y$10$jHWEi2xTiy0nZlatW6PqqOPsq8U8ULRjX94jlexIbhEivemuu/eWm",
+        "rating": 1700,
+        "bgrating": 1700,
+        "map_id": 4,
+        "gamemode_id": 2,
+        "is_admin": false
+    },
+    {
+        "user_id": 5,
+        "username": "player5",
+        "hashed_password": "$2y$10$5oGQY9ZM.Q2x0b9cWm6eBuPn4ghW.TbMMLCDbUHt.CmUAdUTHg4RS",
+        "rating": 1400,
+        "bgrating": 1400,
+        "map_id": 1,
+        "gamemode_id": 3,
+        "is_admin": false
+    },
+    {
+        "user_id": 6,
+        "username": "player6",
+        "hashed_password": "$2y$10$v.QxrNnu0WR42TdgLzVZj.I4AdSKdzgMtMGt7OvA3j3w3LtA.ADYy",
+        "rating": 1650,
+        "bgrating": 1650,
+        "map_id": 2,
+        "gamemode_id": 4,
+        "is_admin": false
+    },
+    {
+        "user_id": 7,
+        "username": "player7",
+        "hashed_password": "$2y$10$wA8NAiEu0elLUyDRzacOVuvEhTbj.UxNZWpm9tZBpIyiIyF7mMwtC",
+        "rating": 1550,
+        "bgrating": 1550,
+        "map_id": 5,
+        "gamemode_id": 1,
+        "is_admin": false
+    },
+    {
+        "user_id": 8,
+        "username": "player8",
+        "hashed_password": "$2y$10$6gtbkqGwlp1EqjGFU/ZRTenXIiZQ9fBRUH3yjV0HObEaJdzWIpyLS",
+        "rating": 1600,
+        "bgrating": 1600,
+        "map_id": 6,
+        "gamemode_id": 2,
+        "is_admin": false
+    },
+    {
+        "user_id": 9,
+        "username": "player9",
+        "hashed_password": "$2y$10$iV.Jaly0PMDWXHLxJfGvHuBVr4jlQbFbzM4Gguex1qokU0F5Q06py",
+        "rating": 1450,
+        "bgrating": 1450,
+        "map_id": 3,
+        "gamemode_id": 3,
+        "is_admin": false
+    },
+    {
+        "user_id": 10,
+        "username": "player10",
+        "hashed_password": "$2y$10$a6mttATqsXePsEa2W.fopeigzedo/6yJzclv0VR3WQMNnHEQXe332",
+        "rating": 1800,
+        "bgrating": 1800,
+        "map_id": 7,
+        "gamemode_id": 4,
+        "is_admin": false
+    },
+    {
+        "user_id": 11,
+        "username": "player11",
+        "hashed_password": "$2y$10$TTeWH1as76ocVdTRRHXTDOCyazhUpkvEgAhy0a6NDVDjQzuf.oQcu",
+        "rating": 1700,
+        "bgrating": 1700,
+        "map_id": 8,
+        "gamemode_id": 1,
+        "is_admin": false
+    },
+    {
+        "user_id": 12,
+        "username": "player12",
+        "hashed_password": "$2y$10$gVkgqrThZkoHxdIPb9FQwOGwbixDHOKOHQiITYJYBFL8USEEBFGLm",
+        "rating": 1500,
+        "bgrating": 1500,
+        "map_id": 9,
+        "gamemode_id": 2,
+        "is_admin": false
+    },
+    {
+        "user_id": 13,
+        "username": "player13",
+        "hashed_password": "$2y$10$GGyWlmNO5.oyogtTbt.JxucRs4PXGkXd8FxCO5ZyfsfypdCi8DgaG",
+        "rating": 1550,
+        "bgrating": 1550,
+        "map_id": 7,
+        "gamemode_id": 3,
+        "is_admin": false
+    },
+    {
+        "user_id": 14,
+        "username": "player14",
+        "hashed_password": "$2y$10$6c9SKU5xzBQH3O1HqwX9geWDP87UFgzBve1LQu9U6jiUAGrt0W9Yy",
+        "rating": 1620,
+        "bgrating": 1620,
+        "map_id": 6,
+        "gamemode_id": 4,
+        "is_admin": false
+    },
+    {
+        "user_id": 15,
+        "username": "player15",
+        "hashed_password": "$2y$10$l0IOk/OlKplofsMNRbODjueS/FMb0fcqnycdBbLUAnPCS5DkSL9FW",
+        "rating": 1470,
+        "bgrating": 1470,
+        "map_id": 4,
+        "gamemode_id": 1,
+        "is_admin": false
+    },
+    {
+        "user_id": 16,
+        "username": "player16",
+        "hashed_password": "$2y$10$DfmoCh5R88TIZlhI11LY2.KorUp6mOg5vvy8ycKwHARa1oRav82xu",
+        "rating": 1550,
+        "bgrating": 1550,
+        "map_id": 5,
+        "gamemode_id": 2,
+        "is_admin": false
+    },
+    {
+        "user_id": 17,
+        "username": "player17",
+        "hashed_password": "$2y$10$RIf11TfAXfloO.OBDlsRX.wjlgyoG07JDSq/zfO4c6MI/tRTO2QN6",
+        "rating": 1530,
+        "bgrating": 1530,
+        "map_id": 3,
+        "gamemode_id": 3,
+        "is_admin": false
+    },
+    {
+        "user_id": 18,
+        "username": "player18",
+        "hashed_password": "$2y$10$KyWYFjWpkXxY/67mwXzckuyebeC9YOxtdPcTyNsBV.lKKFJtz2JeS",
+        "rating": 1650,
+        "bgrating": 1650,
+        "map_id": 2,
+        "gamemode_id": 4,
+        "is_admin": false
+    },
+    {
+        "user_id": 19,
+        "username": "player19",
+        "hashed_password": "$2y$10$C3ZYBvV2q.FQE/rKxqdGneqz0YzB8bCgHPtTGYFwxa3yvY7mE3Aoa",
+        "rating": 1600,
+        "bgrating": 1600,
+        "map_id": 1,
+        "gamemode_id": 1,
+        "is_admin": false
+    },
+    {
+        "user_id": 20,
+        "username": "player20",
+        "hashed_password": "$2y$10$TYuKLwkuH49IGZvx9gK1sefpnaXvq5t8w8JvNkOtxaD/eksRNenLi",
+        "rating": 1680,
+        "bgrating": 1600,
+        "map_id": 5,
+        "gamemode_id": 2,
+        "is_admin": false
+    },
+    {
+        "id": 50,
+        "username": "superadmin",
+        "password_hash": "$2b$12$k9iVFqLwsm2tIEtoYWUUvOhl6Mv.T/mQgseqWRpF1h6I5OVbksuIG",
+        "is_admin": false,
+        "rating": 1000,
+        "map_id": 1,
+        "gamemode_id": 1
+    },
+    {
+        "id": 51,
+        "username": "superadmin",
+        "password_hash": "$2b$12$D1bqeZjLRWRpgWErAc2mRuLaDCLJy4Nl.v7fPPX9.icxPoCzQacmu",
+        "is_admin": false,
+        "rating": 1000,
+        "map_id": 1,
+        "gamemode_id": 1
+    },
+    {
+        "id": 52,
+        "username": "superadmin",
+        "password_hash": "$2b$12$YcAHcWkSXm2MVTyzNmbQIuoevyyBkebYBZkad8miHkzrvLWMff68e",
+        "is_admin": false,
+        "rating": 1000,
+        "bgrating": 1000,
+        "map_id": 1,
+        "gamemode_id": 1
+    },
+    {
+        "user_id": 53,
+        "username": "superadmin",
+        "hashed_password": "$2b$12$gVihUkJH1PdpIE4P5i8MyueSYjPmj0giNRoUq5SAYpB9f4qA7bN4K",
+        "is_admin": false,
+        "rating": 1000,
+        "bgrating": 1000,
+        "map_id": 1,
+        "gamemode_id": 1
+    },
+    {
+        "user_id": 54,
+        "username": "superadmin2",
+        "hashed_password": "$2b$12$dVUXJfdDsIWwjfc1bf8upeFpSDul4Lbga3fjqbWPtUREcQYtmOzbm",
+        "is_admin": false,
+        "rating": 1000,
+        "bgrating": 1000,
+        "map_id": 1,
+        "gamemode_id": 1
+    },
+    {
+        "user_id": 55,
+        "username": "superadmin3",
+        "hashed_password": "$2b$12$wgJ0A4jo5//H8m2LVgO6jOvCeOCjFuNzHudxTqWl9HgJI2SzrKp9K",
+        "is_admin": false,
+        "rating": 1000,
+        "bgrating": 1000,
+        "map_id": 1,
+        "gamemode_id": 1
+    },
+    {
+        "user_id": 56,
+        "username": "superadmin4",
+        "hashed_password": "$2b$12$2mkn8DlfvVFSGgL9pBOv/em1DNqok4TjrxSCV4WoapyCrihddAuCK",
+        "is_admin": false,
+        "rating": 1000,
+        "bgrating": 1000,
+        "map_id": 1,
+        "gamemode_id": 1
+    },
+    {
+        "user_id": 57,
+        "username": "superadmin5",
+        "hashed_password": "$2b$12$AiDhp2GMgvkWEX2zFw0ANuTgaLfCGfCacWKCiFYNXbJJb7w1bswrm",
+        "is_admin": false,
+        "rating": 1000,
+        "bgrating": 1000,
+        "map_id": 1,
+        "gamemode_id": 1
+    },
+    {
+        "user_id": 58,
+        "username": "superadmin6",
+        "hashed_password": "$2b$12$ttp4o6rpxv7tlDi3kJB8r.TpDokcyAB/xUDpRthWqw3a52vmF6Mt.",
+        "is_admin": false,
+        "rating": 1000,
+        "bgrating": 1000,
+        "map_id": 1,
+        "gamemode_id": 1
+    },
+    {
+        "user_id": 59,
+        "username": "superadmin7",
+        "hashed_password": "$2b$12$WPKhyFdqhytwC9otzy/8h.g3HkJWw.7MdLVlu22QZpByiu5DFIKiC",
+        "is_admin": false,
+        "rating": 1000,
+        "bgrating": 1000,
+        "map_id": 1,
+        "gamemode_id": 1
+    },
+    {
+        "user_id": 60,
+        "username": "superadmin8",
+        "hashed_password": "$2b$12$7zYhxoBwTMBJRbuAyRb3We8Wb2.JXFJDbtET1JjrIa7GQcsPJZiDO",
+        "is_admin": false,
+        "rating": 1000,
+        "bgrating": 1000,
+        "map_id": 1,
+        "gamemode_id": 1
+    },
+    {
+        "user_id": 61,
+        "username": "string55",
+        "hashed_password": "$2b$12$8AAY0PGi9HlF2/eq6nJR9OcZIQPaRLElhGEXQjYfmZLV4sVHnSBiq",
+        "is_admin": false,
+        "rating": 100,
+        "bgrating": 1000,
+        "map_id": 1,
+        "gamemode_id": 1
+    },
+    {
+        "user_id": 62,
+        "username": "string56",
+        "hashed_password": "$2b$12$tZh9YOOkSR./YcgCZsMn7uOmLNlUmOgDaNWdj6/5HOUeG.2X4eoo.",
+        "is_admin": false,
+        "rating": 100,
+        "bgrating": 1000,
+        "map_id": 1,
+        "gamemode_id": 1
+    },
+    {
+        "user_id": 63,
+        "username": "string57",
+        "hashed_password": "$2b$12$0Dy8Jh.e1ZIbFgT0AMu2SOjzeK/W58Wpqe8kdIPPAwVNAbO7YTAzW",
+        "is_admin": false,
+        "rating": 100,
+        "bgrating": 1000,
+        "map_id": 1,
+        "gamemode_id": 1
+    },
+    {
+        "user_id": 64,
+        "username": "string58",
+        "hashed_password": "$2b$12$GW6DT4CZP5Vh4P/ZZd75wujn1yaQVFuDMWfmADOdwOUwaZuwLPa5u",
+        "is_admin": false,
+        "rating": 100,
+        "bgrating": 1000,
+        "map_id": 1,
+        "gamemode_id": 1
+    }
+]

@@ -36,7 +36,7 @@ def get_city_list():
 def get_user_list():
     headers = {'Authorization': f'Bearer {get_token()}'}
     user_response = requests.get(url + 'user/', headers=headers)
-    return user_response.json().get('user', [])  # Parse the JSON response
+    return user_response.json() # Parse the JSON response
 
 def get_user_details(user_id: int):
     headers = {'Authorization': f'Bearer {get_token()}'}
