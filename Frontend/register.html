@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+    .container {
+      margin-top: 100px;
+    }
+    .card {
+      border: none;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    .card-body {
+      padding: 40px;
+    }
+    .form-control {
+      border: 1px solid #ced4da;
+      border-radius: 5px;
+    }
+    .btn-primary {
+      background-color: #007bff;
+      border: none;
+    }
+    .btn-primary:hover {
+      background-color: #0056b3;
+    }
+  </style>
+  <title>Registration Page</title>
+</head>
+<body>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-body">
+            <h1 class="text-center mb-4">Matchmaking Superapp</h1>
+            <form id="registerForm">
+              <div class="mb-3">
+                <label for="fullName" class="form-label">Full Name</label>
+                <input type="text" id="fullName" class="form-control" placeholder="Enter full name" required>
+              </div>
+              <div class="mb-3">
+                <label for="username" class="form-label">username</label>
+                <input type="username" id="username" class="form-control" placeholder="Enter username" required>
+              </div>
+              <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" id="password" class="form-control" placeholder="Enter password" required>
+              </div>
+              <div class="mb-3">
+                <label for="rating" class="form-label">Rating</label>
+                <input type="number" id="rating" class="form-control" placeholder="Enter rating" required>
+              </div>
+              <div class="mb-3">
+                <label for="mapId" class="form-label">Map ID</label>
+                <input type="number" id="mapId" class="form-control" placeholder="Enter map ID" required>
+              </div>
+              <div class="mb-3">
+                <label for="gamemodeId" class="form-label">Gamemode ID</label>
+                <input type="number" id="gamemodeId" class="form-control" placeholder="Enter gamemode ID" required>
+              </div>
+              <div class="mb-3">
+                <label for="bgrating" class="form-label">Board Game Rating</label>
+                <input type="number" id="bgrating" class="form-control" placeholder="Enter board game rating" required>
+              </div>
+              <div class="mb-3">
+                <label for="city" class="form-label">City</label>
+                <input type="number" id="city" class="form-control" placeholder="Enter city" required>
+              </div>
+              <div class="mb-3">
+                <label for="boardgame" class="form-label">Board Games (Comma-separated numbers)</label>
+                <input type="text" id="boardgame" class="form-control" placeholder="Enter board game numbers" required>
+              </div>
+
+              <div class="d-grid">
+                <button type="submit" class="btn btn-primary">Register</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("registerForm").addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      let fullName = document.getElementById("fullName").value;
+      let username = document.getElementById("username").value;
+      let password = document.getElementById("password").value;
+      let rating = document.getElementById("rating").value;
+      let mapId = document.getElementById("mapId").value;
+      let gamemodeId = document.getElementById("gamemodeId").value;
+      let bgrating = document.getElementById("bgrating").value;
+      let city = document.getElementById("city").value;
+      let boardgame = document.getElementById("boardgame").value.split(',').map(Number);
+
+      fetch("/register-friends", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          username: username,
+          password: password,
+          rating: parseInt(rating),
+          map_id: parseInt(mapId),
+          gamemode_id: parseInt(gamemodeId),
+          bgrating: parseInt(bgrating),
+          city: parseInt(city),
+          boardgame: boardgame,
+        }),
+      })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log("Registration successful:", data);
+        // Optionally, redirect the user to the login page or perform other actions
+      })
+      .catch((error) => console.error("Error during registration:", error));
+    });
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>

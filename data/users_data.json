@@ -346,5 +346,15 @@
         "bgrating": 1000,
         "map_id": 1,
         "gamemode_id": 1
+    },
+    {
+        "user_id": 65,
+        "username": "testtesttest",
+        "hashed_password": "$2b$12$3QvXzFF6q.IWHVPRAQ6xk.I1A/mZABcbg9EOfGI8Dr5Orz18.a2cS",
+        "is_admin": false,
+        "rating": 1000,
+        "bgrating": 2200,
+        "map_id": 1,
+        "gamemode_id": 1
     }
 ]

@@ -1,2 +1,8 @@
 fastapi
 uvicorn
+pydantic
+passlib
+jwt
+requests
+python-multipart
+jinja2

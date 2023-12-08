@@ -1,4 +1,4 @@
-from fastapi import APIRouter, Depends, HTTPException, status
+from fastapi import APIRouter, Depends, HTTPException, status, Request
 from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm
 from passlib.hash import bcrypt
 from passlib.context import CryptContext
@@ -6,7 +6,8 @@ import jwt
 import json
 import requests
 from models.users import Token, UserIn, User
-
+from fastapi.templating import Jinja2Templates
+from fastapi.responses import HTMLResponse
 
 
 auth_router = APIRouter(tags=["Authentication"])
@@ -30,6 +31,18 @@ def authenticate_user(username: str, password: str):
     return None
 
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
+
+templates = Jinja2Templates(directory="frontend")
+
+@auth_router.get("/login")
+async def login(request: Request):
+    return templates.TemplateResponse("login.html", {"request": request})
+
+
+@auth_router.get("/register-friends", response_class=HTMLResponse)
+async def show_registration_form(request: Request):
+    return templates.TemplateResponse("register.html", {"request": request})
+
 
 def get_password_hash(password):
     return pwd_context.hash(password)
@@ -120,3 +133,7 @@ async def register_user_and_friends(user: UserIn):
     write_users_to_json()
 
     return new_user
+
+@auth_router.get("/welcome", response_class=HTMLResponse)
+async def welcome(request: Request):
+    return templates.TemplateResponse("welcome.html", {"request": request})

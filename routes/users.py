@@ -1,8 +1,11 @@
 import json, requests
 from typing import List, Optional
-from fastapi import APIRouter, Body, HTTPException, status, Depends
+from fastapi import APIRouter, Body, HTTPException, status, Depends, Request
 from routes.auth import get_current_user
+from routes.rollcall import get_user_list
 from models.users import User
+from fastapi.templating import Jinja2Templates
+from fastapi.responses import HTMLResponse
 
 url = 'https://ca-sereneapp.braveisland-f409e30d.southeastasia.azurecontainerapps.io/'
 
@@ -79,3 +82,12 @@ def delete_user_by_id(user_id: int, current_user: User = Depends(get_current_use
         raise HTTPException(status_code=404, detail="User not found")
     else:
         raise HTTPException(status_code=403, detail="Forbidden. You can only delete your own profile or as an admin.")
+
+templates = Jinja2Templates(directory="frontend")
+@user_router.get("/user-dashboard", response_class=HTMLResponse)
+async def user_dashboard(request: Request, current_user: User = Depends(get_current_user)):
+    if not current_user.is_admin:
+        raise HTTPException(status_code=403, detail="Forbidden. Only admin can access the user dashboard.")
+    
+    user_list = get_user_list()  # Assuming you have a function to get the user list in your controller
+    return templates.TemplateResponse("user_dashboard.html", {"request": request, "user_list": user_list})

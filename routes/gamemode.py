@@ -4,6 +4,8 @@ from fastapi import APIRouter, Body, HTTPException, status, Depends
 from models.gamemode import Gamemode
 from models.users import User
 from routes.auth import get_current_user
+from fastapi.responses import HTMLResponse
+from fastapi.templating import Jinja2Templates
 
 gamemodes_data = []
 
@@ -61,3 +63,12 @@ def delete_gamemode_by_id(mode_id: int, current_user: User = Depends(get_current
         raise HTTPException(status_code=404, detail="Gamemode not found")
     else:
         raise HTTPException(status_code=403, detail="Forbidden. Only admin can delete gamemodes.")
+
+templates = Jinja2Templates(directory="templates")  # Assuming templates are in a "templates" folder
+
+@gamemode_router.get("/dashboard", response_class=HTMLResponse)
+def gamemode_dashboard(current_user: User = Depends(get_current_user)):
+    if current_user.is_admin:
+        return templates.TemplateResponse("dashboard.html", {"request": current_user, "gamemodes": gamemodes_data, "is_admin": current_user.is_admin})
+    else:
+        raise HTTPException(status_code=403, detail="Forbidden. Only admin can access the dashboard.")
