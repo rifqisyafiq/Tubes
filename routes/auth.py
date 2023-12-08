@@ -32,7 +32,7 @@ def authenticate_user(username: str, password: str):
 
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 
-templates = Jinja2Templates(directory="frontend")
+templates = Jinja2Templates(directory="Frontend")
 
 @auth_router.get("/login")
 async def login(request: Request):
@@ -90,7 +90,7 @@ async def get_user(user: User = Depends(get_current_user)):
 
 
 # Route to register a new user
-@auth_router.post('/register-friends', response_model=User)
+@auth_router.post('/register', response_model=User)
 async def register_user_and_friends(user: UserIn):
     user_id = len(users_data) + 30
     password_hash = bcrypt.hash(user.password)
@@ -104,10 +104,12 @@ async def register_user_and_friends(user: UserIn):
         "boardgame": user.boardgame,
         "city": user.city,
         "role": "admin" if is_admin else "user",
+        "friend" : [],
+        "reservation": []
     }
     print(newuser)
     response = requests.post(
-    "https://tubes-tst-18221066-rollcall.azurewebsites.net/user/",
+    "https://tubes-tst-18221066-rollcall.azurewebsites.net/register/",
     json=newuser
     )
 

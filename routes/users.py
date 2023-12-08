@@ -7,7 +7,7 @@ from models.users import User
 from fastapi.templating import Jinja2Templates
 from fastapi.responses import HTMLResponse
 
-url = 'https://ca-sereneapp.braveisland-f409e30d.southeastasia.azurecontainerapps.io/'
+url = 'https://tubes-tst-18221066-rollcall.azurewebsites.net/user/'
 
 users_data = []
 

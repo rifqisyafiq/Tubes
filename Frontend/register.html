@@ -102,7 +102,7 @@
       let city = document.getElementById("city").value;
       let boardgame = document.getElementById("boardgame").value.split(',').map(Number);
 
-      fetch("/register-friends", {
+      fetch("/register", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

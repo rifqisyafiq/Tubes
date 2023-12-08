@@ -26,3 +26,4 @@ class User(BaseModel):
     map_id: int
     gamemode_id: int
     bgrating : int
+    is_admin: bool

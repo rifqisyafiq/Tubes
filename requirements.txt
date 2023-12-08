@@ -2,7 +2,7 @@ fastapi
 uvicorn
 pydantic
 passlib
-jwt
+PyJWT
 requests
 python-multipart
 jinja2

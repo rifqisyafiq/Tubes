@@ -26,6 +26,19 @@ def get_map_by_id(map_id: int, current_user: User = Depends(get_current_user)):
             return map
     raise HTTPException(status_code=404, detail="Map not found")
 
+@map_router.delete("/{mapid}")
+def delete_map_by_id(mapid: int, current_user: User = Depends(get_current_user)):
+    if current_user.is_admin:
+        for map in maps_data:
+            if map["mapid"] == mapid:
+                maps_data.remove(map)
+                with open("data/maps_data.json", "w") as file:
+                    json.dump(maps_data, file)
+                return {"message": "Map deleted successfully"}
+        raise HTTPException(status_code=404, detail="Map not found")
+    else:
+        raise HTTPException(status_code=403, detail="Forbidden. Only admin can delete maps.")
+
 @map_router.post("/")
 def create_map(map: Map, current_user: User = Depends(get_current_user)):
     if current_user.is_admin:
